@@ -1,0 +1,229 @@
+@font-face {
+	font-family: "xkcd";
+	src: url("/xkcd-Regular.woff") format("woff");
+}
+
+
+/* Material icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url("/icons/MaterialIcons-Regular.woff2") format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* End material icons */
+
+
+body {
+	background-color: #cae1e1;
+}
+
+.content.center {
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+	background-color: white;
+	border-style: hidden;
+	border-radius: 5px;
+}
+
+#top {
+	text-align: center;
+	font-family: "xkcd", sans-serif;
+	font-size: 5em;
+	max-width: 9.5em;
+	margin: 0 auto 1em;
+	border-bottom-color: black;
+	border-bottom-width: thick;
+	border-bottom-style: solid;
+	border-radius: 5px;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	padding: 4px;
+	border-color: lightgray;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 3px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: none;
+}
+
+input, select, button {
+	transition: border-color 0.25s, box-shadow 1s;
+}
+
+input:focus, select:focus, button:focus {
+	border-color: #00eef1;
+	box-shadow: 0 0 6px #00eef1;
+}
+
+input:hover, select:hover, button:hover {
+	border-color: #00c2c4;
+	box-shadow: 0 0 6px #00c2c4;
+}
+
+.setting {
+	display: inline-block;
+	text-align: center;
+}
+
+.setting.vert {
+	width: 16em;
+	padding: 0 .5em;
+}
+
+.setting.horiz {
+	position: inherit;
+}
+
+.setting.vert input[type="number"] {
+	font-size: 15em;
+	text-align: center;
+	width: 1em;
+}
+
+.setting span.label {
+	font-size: 1em;
+}
+
+.settings-main {
+	display: table;
+	margin:auto;
+	position: relative;
+}
+
+.setting-below {
+	width: 100%;
+	max-width: 500px;
+	height: 0; /* set to 200px to activate */
+	display: block;
+	overflow: auto;
+	transition: height .5s;
+}
+
+div.result {
+	width: 100%;
+	height: 0; /* set to 200px to activate */
+	margin-bottom: 10px;
+	display: block;
+	overflow: auto;
+	background: lightgray;
+	transition: height .5s;
+}
+
+div.result .title {
+	width: 100%;
+	text-align: center;
+	font-family: "xkcd", sans-serif;
+}
+
+div.result p.result {
+	text-align: center;
+	margin: auto;
+
+}
+
+.words {background: lightgray;}
+
+.help {
+	position: relative;
+	display: inline-block;
+}
+
+.help .tooltip {
+	opacity: 0;
+	visibility: hidden;
+	width: 200px;
+	font-family: sans-serif;
+	font-size: .8em;
+	background-color: darkgray;
+	color: white;
+	text-align: left;
+	border-radius: 4px;
+	padding: 5px;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 1;
+	transition: opacity .5s;
+}
+
+.help:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+}
+
+select {
+	border-style: solid;
+	border-width: thin;
+	border-radius: 5px;
+	border-color: white;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	padding: 5px;
+	margin: 5px;
+	background-color: lightgray;
+}
+
+select:hover {
+	background-color: #e7e7e7;
+}
+
+@keyframes loaderAnimation {
+	from {transform: rotate(0deg)}
+	to {transform: rotate(540deg)}
+}
+
+.loader {
+	width: 10px;
+	height: 10px;
+	display: none; /* change to inline-block to activate */
+	border-style: solid;
+	border-radius: 10px;
+	border-width: thick;
+	border-color: lightgray darkblue lightgray darkblue;
+	animation: loaderAnimation 1.5s ease-in-out infinite;
+}
+
+button {
+	background-color: #cae1e1;
+	padding: 5px;
+	margin-bottom: 2em;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 1.2em;
+	border-style: solid;
+	border-width: medium;
+	border-color: #cae1e1;
+	border-radius: 8px;
+}
