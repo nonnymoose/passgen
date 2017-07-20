@@ -24,7 +24,7 @@
 			<div class="setting horiz">
 				Word database <div class="help"><span class="material-icons">help</span><span class="tooltip">Wordnet is an exhaustive list of english words and their meanings. This generally generates more secure passwords.<br />Thing Explainer is the database of the "ten hundred" most common words used in Randall Munroe's book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>.<br /><span style="color:red">Warning! Both lists contain swearwords.</span></span></div>
 				<br />
-				<select onchange="updateWordDB()" id="wordb" onmouseout="this.blur()">
+				<select onchange="updateWordDB()" id="wordb">
 					<option value="wordnet">Wordnet</option>
 					<option value="1000">Thing Explainer</option>
 				</select>
@@ -32,7 +32,7 @@
 				<br /><br /><br /><br /><br />
 
 				Number Sequence <div class="help"><span class="material-icons">help</span><span class="tooltip">Instead of a random number sequence, you can choose one that moves across the numpad in a pattern, which is easier to remember for kinesthetic learners like me.</span></div><br />
-				<select onchange="updateNumberGen()" id="numbergen" onmouseout="this.blur()">
+				<select onchange="updateNumberGen()" id="numbergen">
 					<option value="random">Random</option>
 					<option value="pattern">Pattern</option>
 				</select><br /><br /><br /><br /><br />
