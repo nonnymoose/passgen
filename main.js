@@ -65,14 +65,14 @@ function getWordDB() {
 function updateWordDB() {
 	if (getWordDB() == "1000") {
 		if (w1000[0] === undefined) {
-			loaderQueue.push(["10", "/1000/index.adj"],["11", "/1000/index.adv"],["12", "/1000/index.noun"],["13", "/1000/index.verb"]);
+			loaderQueue.push(["10", "1000/index.adj"],["11", "1000/index.adv"],["12", "1000/index.noun"],["13", "1000/index.verb"]);
 			loaded();
 		}
 	}
 	else { // kewl fallback to wordnet, right?
 		if (wordnet[0] === undefined) {
 			// should not happen but just in case... ;)
-			loaderQueue.push(["w0","/wordnet/index.adj"],["w1","/wordnet/index.adv"],["w2","/wordnet/index.noun"],["w3","/wordnet/index.verb"]);
+			loaderQueue.push(["w0","wordnet/index.adj"],["w1","wordnet/index.adv"],["w2","wordnet/index.noun"],["w3","wordnet/index.verb"]);
 			loaded();
 		}
 	}
@@ -153,5 +153,5 @@ function gen() {
 }
 
 //this goes at the end!!!
-loaderQueue.push(["w0","/wordnet/index.adj"],["w1","/wordnet/index.adv"],["w2","/wordnet/index.noun"],["w3","/wordnet/index.verb"],["w4","/wordnet/data.adj"],["w5","/wordnet/data.adv"],["w6","/wordnet/data.noun"],["w7","/wordnet/data.verb"]);
+loaderQueue.push(["w0","wordnet/index.adj"],["w1","wordnet/index.adv"],["w2","wordnet/index.noun"],["w3","wordnet/index.verb"],["w4","wordnet/data.adj"],["w5","wordnet/data.adv"],["w6","wordnet/data.noun"],["w7","wordnet/data.verb"]);
 loaded();
