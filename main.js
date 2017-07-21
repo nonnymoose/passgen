@@ -10,6 +10,8 @@ loadReq.addEventListener("load", loaded);
 function loaded() {
 	if (!loading) {
 		document.querySelector("#wordDBLoader").style.display = "inline-block";
+		document.querySelector("#gen").onclick = false;
+		document.querySelector("#gen").innerText = "Loading...";
 		loading = true;
 	}
 	if (this.responseURL !== undefined) {
@@ -30,6 +32,8 @@ function loaded() {
 	}
 	else {
 		document.querySelector("#wordDBLoader").style.display = "none";
+		document.querySelector("#gen").onclick = gen;
+		document.querySelector("#gen").innerText = "Generate Password";
 		loading = false;
 	}
 }
