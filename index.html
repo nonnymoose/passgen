@@ -14,11 +14,11 @@
 		</div>
 		<div class="settings-main">
 			<div class="setting vert words">
-				<input type="number" min="0" value="0" id="#words" onblur="updateWords()" oninput="updateWords()" onmouseover="this.focus()" onmouseout="this.blur()" /><br />
+				<input type="number" min="0" value="0" id="#words" onblur="updateWords()" oninput="updateWords()" /><br />
 				<span class="label">Random words</span>
 			</div>
 			<div class="setting vert">
-				<input type="number" min="0" value="0" id="#numbers" oninput="if (isNaN(parseInt(this.value))) {this.value=0} else {this.value = parseInt(this.value)}" onmouseover="this.focus()" onmouseout="this.blur()" /><br />
+				<input type="number" min="0" value="0" id="#numbers" oninput="if (isNaN(parseInt(this.value))) {this.value=0} else {this.value = parseInt(this.value)}" /><br />
 				<span class="label">Random numbers</span>
 			</div>
 			<div class="setting horiz">
