@@ -75,7 +75,6 @@ function updateWordDB() {
 	}
 	else { // kewl fallback to wordnet, right?
 		if (wordnet[0] === undefined) {
-			// should not happen but just in case... ;)
 			loaderQueue.push(["w0","wordnet/index.adj"],["w1","wordnet/index.adv"],["w2","wordnet/index.noun"],["w3","wordnet/index.verb"]);
 			loaded();
 		}
